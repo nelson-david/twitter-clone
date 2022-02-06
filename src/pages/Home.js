@@ -7,15 +7,15 @@ import PostPage from "./subPages/PostPage";
 const Home = () => {
     return (
         <div className="row">
-            <div className="col-xl-3" id="sidebar__col">
+            <div className="col-md-3" id="sidebar__col">
                 <Sidebar />
             </div>
-            <div className="col-xl-5" id="mainapp__col">
+            <div className="col-md-5 col-sm-7 col-12" id="mainapp__col">
                 <HomeNav />
                 <NewpostCard />
                 <PostPage />
             </div>
-            <div className="col-xl-4" id="rightbar__col">
+            <div className="col-md-4 col-sm-5" id="rightbar__col">
                 <Rightbar />
             </div>
         </div>

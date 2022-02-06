@@ -84,7 +84,7 @@ const NewpostCard = () => {
 				<form onSubmit={uploadPost}>
 					<textarea
 						type="text"
-						cols="45"
+						cols="35"
 						placeholder="What's happening"
 						onChange={(e) => setPostText(e.target.value)}
 					/>

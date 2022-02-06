@@ -1,7 +1,9 @@
 import TextContent from "../../components/card/TextContent";
 import ImageContent from "../../components/card/ImageContent";
+import PostMoreCard from "../../components/card/PostMoreCard";
 import { Link } from "react-router-dom";
 import * as HiIcons from "react-icons/hi";
+import * as BsIcons from "react-icons/bs";
 import ProfileImg1 from "../../assets/img/img1.jpg";
 import ProfileImg2 from "../../assets/img/profile_image.jpg";
 
@@ -41,11 +43,14 @@ const PostPage = () =>{
 							className="postauthor__img"
 							alt="PostAuthorImage"
 						/>
-						<div to="/praisemike">
-							<Link>
+						<div id="postcontent__div">
+							<Link to="/praisemike" id="userhead_details">
 								{post.author.name}
 								<HiIcons.HiBadgeCheck />
 								<span>@{post.author.username}</span>
+								<i>
+									<BsIcons.BsChevronBarExpand />
+								</i>
 							</Link>
 
 							{
@@ -58,6 +63,8 @@ const PostPage = () =>{
 								<ImageContent
 								/>:''
 							}
+
+							<PostMoreCard />
 						</div>
 					</div>
 				</div>
