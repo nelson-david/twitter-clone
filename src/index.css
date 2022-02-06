@@ -473,7 +473,7 @@ body{
     transition: 0.3s all ease-in-out;
 }
 .imagecontent__img:hover{
-    filter: brightness(80%);
+    filter: brightness(75%);
 }
 
 /* Animation Styling */
