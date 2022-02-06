@@ -1,0 +1,500 @@
+@font-face {font-family: blanka; src: url('./assets/fonts/blanka.otf');
+    font-display: swap;}
+@font-face {font-family: proxima; src: url('./assets/fonts/proxima.otf');
+    font-display: swap;}
+@font-face {font-family: phantom; src: url('./assets/fonts/phantom.otf');
+    font-display: swap;}
+@font-face {font-family: cubano; src: url('./assets/fonts/cubano.ttf');
+    font-display: swap;}
+@font-face {font-family: cubano_l; src: url('./assets/fonts/cubano_l.ttf');
+    font-display: swap;}
+@font-face {font-family: sofiapro; src: url('./assets/fonts/sofiapro.otf');
+    font-display: swap;}
+
+
+:root{
+	--white: #FFFFFF;
+	--black: #000000;
+    --dark-bg: #191C20;/*#111216*/
+    --accent-color: #50c9c3;
+    --accent-rgb: #50c9c333;
+    --dim-white: #F3F3F3;
+    --dim-grey: #495057;
+    --deep-grey: #b2becd;
+    --poppins: 'Poppins', sans-serif;
+    --josefin: 'Josefin', sans-serif;
+    --signika: 'Signika', sans-serif;
+    --signika-negative: 'Signika Negative', sans-serif;
+    --alegreya: 'Alegreya Sans SC', sans-serif;
+    --arima: 'Arima Madurai', cursive;
+    --blanka: blanka;
+    --proxima: proxima;
+    --phantom: phantom;
+    --font-body: sofiapro;
+    --font-head: cubano;
+    --font-head1: cubano_l;
+}
+
+body{
+    background-color: var(--black);
+}
+
+#sidebar__col{
+    padding: 0px;
+    border-right: 0.5px solid var(--dim-grey);
+}
+#mainapp__col{
+    padding: 0px;
+}
+#rightbar__col{
+    padding: 0px;
+    border-left: 0.5px solid var(--dim-grey);
+}
+
+/* Sidebar Styling */
+.sidebar__card{
+    border-radius: 0px;
+    box-shadow: none;
+    background-color: var(--black);
+    height: 100%;
+}
+.sidebar__card .sidebar__header{
+    padding: 10px;
+    padding-top: 5px;
+    justify-content: center;
+}
+.sidebar__card .sidebar__header a{
+    color: var(--white);
+    font-size: 35px;
+    display: block;
+}
+.sidebar__card ul{
+    margin-bottom: 0px;
+    padding: 20px;
+    padding-top: 0px;
+    padding-left: 55px;
+    padding-right: 55px;
+}
+.sidebar__card div#tweetbutton__div{
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+.sidebar__card div#tweetbutton__div a#createtweet_button{
+    background-color: var(--accent-color);
+    display: block;
+    width: 100%;
+    padding: 32px;
+    padding-top: 15px;
+    padding-bottom: 14px;
+    text-align: center;
+    color: var(--black);
+    border-radius: 30px;
+    font-family: var(--poppins);
+    font-weight: 500!important;
+    font-size: 17px;
+    transition: 0.3s all ease-in-out;
+}
+.sidebar__card div#tweetbutton__div a#createtweet_button:hover{
+    filter: brightness(80%);
+}
+.sidebar__card ul li{
+    display: block;
+    margin-bottom: 15px;
+}
+.sidebar__card ul li:last-child{
+    margin-bottom: 0px;
+}
+.sidebar__card ul li a{
+    display: block;
+    padding: 10px;
+    padding-left: 15px;
+    padding-right: 15px;
+    font-family: var(--font-head);
+    font-size: 15px;
+    color: var(--white);
+    border-radius: 0.5rem;
+    transition: 0.3s all ease-in-out;
+    border: 2px solid transparent;
+}
+.sidebar__card ul li a:hover{
+    background-color: var(--accent-rgb);
+}
+.sidebar__card ul li a:focus{
+    background-color: var(--accent-color);
+}
+.sidebar__card ul li a svg{
+    margin-top: -5px;
+    margin-right: 15px;
+    font-size: 25px;
+}
+
+/* Home Nav Styling */
+.home__nav{
+    background-color: rgba(0, 0, 0, 0.65);
+    padding: 15px;
+    backdrop-filter: blur(12px);
+    border: 0px solid var(--black);
+}
+.home__nav span{
+    color: var(--white);
+    font-family: var(--font-head);
+    font-size: 16px;
+}
+.home__nav svg{
+    color: var(--dim-white);
+    float: right;
+    font-size: 25px;
+}
+
+/* New Post Card styling */
+.newpost__card{
+    padding: 15px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    border-radius: 0px;
+    border-bottom: 0.5px solid var(--dim-grey);
+    background-color: var(--black);
+}
+.newpost__card img#profile_img{
+    width: 50px;
+    height: 50px;
+    object-fit: cover;
+    object-position: center;
+    border-radius: 50%;
+    cursor: pointer;
+}
+.newpost__card form textarea{
+    margin-left: 10px;
+    background-color: transparent;
+    border: none!important;
+    outline: none!important;
+    resize: none;
+    color: var(--white);
+    font-size: 20px;
+    font-family: var(--proxima);
+    margin-top: 10px!important;
+    border-radius: 10px;
+    padding-left: 10px;
+}
+.newpost__card form textarea::placeholder{
+    color: var(--deep-grey);
+}
+
+.newpost__card form .newpost__icons{
+    padding: 5px;
+    padding-right: 15px;
+}
+.newpost__card form .newpost__icons button{
+    float: right;
+    border-radius: 25px;
+    font-size: 15px;
+    padding: 13px;
+    padding-bottom: 12px;
+    padding-left: 25px;
+    padding-right: 25px;
+    border: none!important;
+    outline: none!important;
+    background-color: var(--accent-color);
+    color: var(--black);
+    font-family: var(--proxima);
+    font-weight: 500!important;
+    transition: 0.3s all ease-in-out;
+}
+.newpost__card form .newpost__icons button:hover{
+    filter: brightness(80%);
+}
+.newpost__card form .newpost__icons button:disabled{
+    background-color: var(--accent-rgb);
+    color: var(--white);
+    cursor: not-allowed;
+}
+.newpost__card form .newpost__icons button svg{
+    font-size: 18px;
+    -webkit-animation: spin-animation 0.4s infinite linear;
+    animation: spin-animation 0.4s infinite linear;
+    color: aliceblue;
+    margin-left: 6px;
+    margin-right: 6px;
+}
+.newpost__card form .newpost__icons label{
+    padding: 5px;
+    padding-left: 13px;
+    padding-right: 13px;
+    transition: 0.3s all ease-in-out;
+    border-radius: 7px;
+    margin-right: 5px;
+    color: var(--accent-color);
+    cursor: pointer;
+    font-size: 20px;
+}
+.newpost__card form .newpost__icons label:hover{
+    background-color: var(--accent-rgb);
+}
+
+.post_preview_div{
+    padding: 10px;
+    padding-top: 20px;
+    padding-left: 0px;
+    display: flex;
+}
+.prev_image_div_col{
+    padding: 0px;
+    margin-right: 15px;
+}
+.post_preview_div .customCard{
+}
+.post_preview_div .customCard .prevImageHomeCancelIcon{
+    color: var(--deep-grey);
+    margin-bottom: 5px;
+    font-size: 20px;
+    cursor: pointer;
+    transition: 0.3s all ease-in-out;
+}
+.post_preview_div .customCard .prevImageHomeCancelIcon:hover{
+    filter: brightness(70%);
+}
+
+.post_preview_div .customCard img{
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+    object-position: center;
+    border-radius: 15px;
+    transition: 0.3s all ease-in-out;
+    cursor: pointer;
+}
+.post_preview_div .customCard img:hover{
+    filter: brightness(70%);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Rightbar Style */
+.rightbar__card{
+    padding: 30px;
+    padding-top: 10px;
+    border-radius: 0px;
+    background-color: var(--black);
+}
+.rightbar__card form input#search__form{
+    padding: 25px;
+    padding-left: 30px;
+    padding-right: 30px;
+    background-color: var(--dark-bg);
+    border-radius: 30px;
+    font-size: 17px;
+    font-family: var(--proxima);
+    font-weight: 500!important;
+    outline: none!important;
+    border: none!important;
+    -webkit-appearance: none!important;
+    box-shadow: none!important;
+}
+.rightbar__card div.trends__card{
+    padding: 22px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    background-color: var(--dark-bg);
+    border-radius: 20px;
+}
+.rightbar__card div.trends__card a#showmore__link{
+    font-family: var(--font-head);
+    font-size: 13px;
+    color: var(--accent-color);
+    transition: 0.3s all ease-in-out;
+}
+.rightbar__card div.trends__card a#showmore__link:hover{
+    filter: brightness(80%);
+}
+
+.rightbar__card div.trends__card p#trends_headtext{
+    color: var(--white);
+    font-family: var(--font-head);
+    font-size: 17px;
+    padding-bottom: 5px;
+}
+.rightbar__card div.trends__card p#trends_headtext a{
+    float: right;
+    font-size: 25px;
+    color: var(--deep-grey);
+}
+.rightbar__card div.trends__card p#trends_headtext a svg{
+    margin-top: -15px;
+}
+
+.singletrend__card{
+    padding: 0px;
+    margin-bottom: 10px;
+    box-shadow: none;
+    background-color: var(--dark-bg);
+}
+.singletrend__card span{
+    color: var(--dim-grey);
+    font-family: var(--signika-negative);
+    font-size: 14px;
+}
+.singletrend__card p{
+    color: var(--dim-white);
+    font-family: var(--proxima);
+    font-weight: 600!important;
+    margin-bottom: 0px;
+    font-size: 16px;
+}
+.singletrend__card i{
+    font-style: normal;
+    color: var(--dim-grey);
+    font-size: 13px;
+    font-family: var(--signika-negative);
+}
+
+/* Auth Styling */
+.auth__card{
+    background-color: var(--dark-bg);
+    border-radius: 20px;
+}
+.auth__card .authcard__header{
+
+}
+.auth__card .authcard__body{
+    padding: 30px;
+}
+.auth__card .authcard__body legend{
+    color: var(--white);
+    font-family: var(--font-head);
+    font-size: 20px;
+    display: block;
+    padding-bottom: 15px;
+}
+.auth__card .authcard__body input.auth__input{
+    padding: 25px;
+    padding-left: 10px;
+    padding-right: 10px;
+    font-family: var(--arima);
+    background-color: var(--dark-bg);
+    border: 2px solid var(--dim-grey)!important;
+    outline: none!important;
+    -webkit-appearance: none!important;
+    box-shadow: none!important;
+    color: var(--deep-grey);
+    transition: 0.3s all ease-in-out;
+    border-radius: 10px;
+}
+.auth__card .authcard__body input.auth__input:focus{
+    border: 2px solid var(--accent-color)!important;
+}
+.auth__card .authcard__body input.auth__input::placeholder{
+    color: var(--deep-grey);
+}
+
+
+/* Post Page Styling */
+.post__page{
+}
+
+.post__card{
+    background-color: var(--black);
+    border-radius: 0px;
+    padding: 10px;
+}
+.post__card .postcard__body{
+    display: flex;
+}
+.post__card .postcard__body .postauthor__img{
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    object-fit: cover;
+    object-position: center;
+    cursor: pointer;
+}
+.post__card .postcard__body div{
+    padding-left: 10px;
+    display: block;
+    width: 100%;
+}
+.post__card .postcard__body div a{
+    font-family: var(--proxima);
+    font-weight: 500!important;
+    color: var(--deep-grey);
+    font-size: 15px;
+}
+.post__card .postcard__body div a span{
+    color: var(--dim-grey);
+    filter: brightness(150%);
+}
+.post__card .postcard__body div a svg{
+    margin-left: 1px;
+    margin-right: 5px;
+    margin-top: -4px;
+    font-size: 19px;
+}
+.post__card .postcard__body div p{
+    display: block;
+    padding: 5px;
+    color: var(--white);
+    font-family: var(--proxima);
+    font-weight: 400!important;
+    font-size: 15px;
+}
+
+.imagecontent__img{
+    width: 100%;
+    border-radius: 10px;
+    height: 250px;
+    object-fit: cover;
+    object-position: center;
+    cursor: pointer;
+    transition: 0.3s all ease-in-out;
+}
+.imagecontent__img:hover{
+    filter: brightness(80%);
+}
+
+/* Animation Styling */
+@-webkit-keyframes spin-animation {
+    100% {
+        -webkit-transform: rotate(0deg);
+        transform: rotate(0deg);
+    }
+    0% {
+        -webkit-transform: rotate(359deg);
+        transform: rotate(359deg);
+    }
+}
+
+@keyframes spin-animation {
+    100% {
+        -webkit-transform: rotate(0deg);
+        transform: rotate(0deg);
+    }
+    0% {
+        -webkit-transform: rotate(359deg);
+        transform: rotate(359deg);
+    }
+}
